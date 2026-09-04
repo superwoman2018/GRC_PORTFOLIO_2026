@@ -1,58 +1,31 @@
-# GRC Portfolio 2026 — Judgment Under Real Constraints
+# 02 — ISO 27001 Statement of Applicability
 
-## Why I built this
+**Framework:** ISO/IEC 27001:2022, Annex A (93 controls)
+**Core skill demonstrated:** Risk-driven control exclusions — deciding, and
+justifying, which controls do and don't apply.
 
-Most GRC portfolios show the same thing: a control mapping, a policy template,
-a list of frameworks someone has "worked with." That proves familiarity with
-vocabulary. It doesn't prove someone can do the job.
+## What's in this folder
 
-The actual work of GRC isn't knowing what ISO 27001 or PCI DSS says — it's
-deciding how a specific organization, with specific limitations and specific
-business pressure, should respond to what the standard asks for. That means
-making a call, writing down why, and being ready to defend it when someone
-pushes back.
+| File | What it is |
+|---|---|
+| `scenario.md` | The situation this project starts from, and what had to be figured out |
+| `deliverables/CloudNative_ISO27001_Evidence_Index.xlsx` | The starting point — 32 existing artifacts mapped to the controls they support |
+| `deliverables/CloudNative_ISO27001_SoA.xlsx` | The finished Statement of Applicability — all 93 controls, Applicable Yes/No, justification, evidence reference, and implementation status |
 
-This repository is five scenarios where I did exactly that: took a
-realistic constraint, made a documented decision, and wrote down the
-reasoning — including where that reasoning has limits.
+## How to read the SoA file
 
-## What I'm optimizing for
+- **77 controls** are marked Applicable = Yes, Implemented, referencing the
+  specific evidence artifact (EV-XXX) that supports them.
+- **16 controls** had no existing evidence and required an individual applicability
+  decision — these are the rows worth reading closely, since the reasoning behind
+  each Yes/No *is* the SoA. See `scenario.md` for the walkthrough of that reasoning.
+- The **Summary** tab auto-totals applicability and implementation status across all
+  93 rows.
 
-| | Just doing the task | Showing judgment |
-|---|---|---|
-| **Looks like** | A control mapped to a requirement | A decision on how to meet (or not meet) that requirement, and why |
-| **Explains** | *What* the framework says | *Why* it matters here, and when it wouldn't |
-| **Survives** | A checklist review | A follow-up question from someone who disagrees |
+## What I'd flag if this were a real audit
 
-Anyone can produce the left column with a template. The right column is
-the actual skill.
-
-## Projects
-
-| # | Project | Framework / Domain | What it's testing |
-|---|---|---|---|
-| 01 | PCI DSS Network Segmentation Review | PCI DSS | Whether a segmentation claim would hold up under an assessor's questions |
-| 02 | ISO 27001 Statement of Applicability | ISO 27001 | Justifying control exclusions with a real risk rationale, not a shortcut |
-| 03 | EU AI Act High-Risk Assessment | EU AI Act | Turning a regulation's wording into an actual operational classification |
-| 04 | GRC Control Automation | GRC Engineering | Where automation genuinely reduces manual compliance effort, and where it can't |
-| 05 | Risk Acceptance Documentation | Enterprise Risk | Writing a risk decision a business leader — not a security person — would actually understand |
-
-Each folder contains the scenario I worked from, the deliverable I produced,
-and a short write-up of the trade-offs and assumptions behind it.
-
-## How to use this
-
-```
-git clone https://github.com/YOUR-USERNAME/grc-portfolio-2026.git
-cd grc-portfolio-2026/01-pci-dss-network-segmentation
-```
-
-Each project folder has its own README with the scenario and the finished
-deliverable. Start with whichever domain is closest to the roles you're
-targeting.
-
-## About me
-
-Maimoona Iqbal — GRC professional, CISA certified. Connect on
-[LinkedIn](https://www.linkedin.com/in/maimoonaiqbal/) · More write-ups on
-[Medium](https://medium.com/@maimoona2018).
+An assessor would likely push hardest on the Not Applicable physical controls and
+on A.8.30 — those are the rows where "we don't have evidence" could be mistaken for
+"we didn't think about it," when the actual position is a considered exclusion.
+Being able to explain *why* each exclusion holds, not just that it's marked No, is
+the point of this exercise.
