@@ -1,0 +1,48 @@
+# Scenario
+
+**Organization:** CloudNative (fictional) — same cloud-native SaaS company as
+Project 02.
+**Objective:** Formally document risks the business has chosen to accept rather
+than remediate — and make the case for each acceptance in language a business
+owner, not a security person, would sign off on.
+
+## Why risk acceptance is its own skill
+
+Most GRC portfolios stop at identifying a risk. The harder, more senior part of
+the job is what happens after: not every risk gets remediated on the timeline
+security would prefer, and the job is to make sure that when a business decides
+to accept a risk, the decision is documented, owned by the right person, bounded
+by a review date, and backed by something that actually reduces exposure in the
+meantime — not just a shrug and an email thread nobody can find six months later.
+
+## Three risks, three different reasons to accept
+
+I documented three risk acceptances for CloudNative, each testing a different
+kind of judgment call:
+
+1. **RA-001 — Legacy finance tool without MFA.** A cost-vs-exposure call: the
+   fix (migrate platforms, or build a custom auth wrapper) costs more than the
+   actual exposure justifies for a 3-person, VPN-restricted tool. This is the
+   one I built out as a full worked example — see `deliverables/RA-001-Legacy-
+   Finance-Admin-MFA.docx` — because it's the version of this document a
+   non-technical business owner actually has to read and sign, and getting that
+   tone right (plain language, no jargon, a clear ask) is the actual point of
+   the exercise.
+2. **RA-002 — Vendor without SOC 2 Type II.** A business-necessity call: the
+   tool is needed for a Q4 deadline, no certified alternative fits the
+   timeline, and the compensating control is scope-limiting what data the
+   vendor ever touches (no PII, aggregated metrics only) rather than waiting
+   on a certification with no committed date.
+3. **RA-003 — Known vulnerability on a system being retired.** A time-bound
+   call: patching effort isn't worth it for a system with a fixed 90-day
+   remaining lifespan, so the acceptance is explicitly tied to the
+   decommission date rather than left open-ended.
+
+## What I'd push back on if I were reviewing this, not writing it
+
+RA-001 is the strongest of the three because the review trigger is genuinely
+enforceable (a vendor feature release or a fixed date). RA-002's trigger — 
+contract renewal, over a year out — is the weakest: a lot can change in a
+vendor's security posture in a year without anyone revisiting this. In a real
+engagement I'd push for a 90-day interim check-in on RA-002, not just a
+renewal-date review.
