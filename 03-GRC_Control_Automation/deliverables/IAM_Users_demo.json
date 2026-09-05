@@ -1,0 +1,11 @@
+{
+  "iam_users": [
+    {"username": "j.chen", "role": "Engineering", "mfa_devices": 1, "access_keys_active": 1, "last_activity": "2026-08-30"},
+    {"username": "m.iqbal", "role": "Security/GRC", "mfa_devices": 1, "access_keys_active": 0, "last_activity": "2026-09-01"},
+    {"username": "a.hassan", "role": "Finance Operations", "mfa_devices": 0, "access_keys_active": 1, "last_activity": "2026-08-28"},
+    {"username": "s.khan", "role": "Engineering", "mfa_devices": 1, "access_keys_active": 2, "last_activity": "2026-09-02"},
+    {"username": "svc-ci-deploy", "role": "Service Account", "mfa_devices": 0, "access_keys_active": 1, "last_activity": "2026-09-03"},
+    {"username": "r.malik", "role": "Marketing", "mfa_devices": 0, "access_keys_active": 1, "last_activity": "2026-07-15"},
+    {"username": "t.okoro", "role": "Engineering", "mfa_devices": 1, "access_keys_active": 1, "last_activity": "2026-09-03"}
+  ]
+}
