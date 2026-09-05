@@ -1,0 +1,10 @@
+{
+  "s3_buckets": [
+    {"name": "cloudnative-customer-uploads", "encryption_enabled": true, "encryption_type": "SSE-KMS", "public_access_blocked": true, "data_classification": "Confidential"},
+    {"name": "cloudnative-app-logs", "encryption_enabled": true, "encryption_type": "SSE-S3", "public_access_blocked": true, "data_classification": "Internal"},
+    {"name": "cloudnative-static-assets", "encryption_enabled": false, "encryption_type": null, "public_access_blocked": false, "data_classification": "Public"},
+    {"name": "cloudnative-backups", "encryption_enabled": true, "encryption_type": "SSE-KMS", "public_access_blocked": true, "data_classification": "Confidential"},
+    {"name": "cloudnative-analytics-export", "encryption_enabled": false, "encryption_type": null, "public_access_blocked": true, "data_classification": "Internal"},
+    {"name": "cloudnative-marketing-assets-temp", "encryption_enabled": false, "encryption_type": null, "public_access_blocked": false, "data_classification": "Unclassified"}
+  ]
+}
