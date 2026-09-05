@@ -1,0 +1,8 @@
+username,role,mfa_devices,active_access_keys,last_activity,control,status,note
+j.chen,Engineering,1,1,2026-08-30,A.8.5,Compliant,
+m.iqbal,Security/GRC,1,0,2026-09-01,A.8.5,Compliant,
+a.hassan,Finance Operations,0,1,2026-08-28,A.8.5,NON-COMPLIANT,No MFA device registered. Escalate to account owner for remediation.
+s.khan,Engineering,1,2,2026-09-02,A.8.5,Compliant,
+svc-ci-deploy,Service Account,0,1,2026-09-03,A.8.5,N/A — service account,MFA not applicable to non-interactive accounts. Compensating control: access key rotation policy applies instead (see A.5.17).
+r.malik,Marketing,0,1,2026-07-15,A.8.5,NON-COMPLIANT,No MFA device registered. Escalate to account owner for remediation.
+t.okoro,Engineering,1,1,2026-09-03,A.8.5,Compliant,
