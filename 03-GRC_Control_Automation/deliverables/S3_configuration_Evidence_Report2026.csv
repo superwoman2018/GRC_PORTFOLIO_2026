@@ -1,0 +1,7 @@
+bucket,classification,encryption_enabled,encryption_type,public_access_blocked,control,status,note
+cloudnative-customer-uploads,Confidential,True,SSE-KMS,True,A.8.9,Compliant,
+cloudnative-app-logs,Internal,True,SSE-S3,True,A.8.9,Compliant,
+cloudnative-static-assets,Public,False,none,False,A.8.9,Compliant,Classified Public — encryption and access-blocking are not required for intentionally public data.
+cloudnative-backups,Confidential,True,SSE-KMS,True,A.8.9,Compliant,
+cloudnative-analytics-export,Internal,False,none,True,A.8.9,NON-COMPLIANT,encryption not enabled
+cloudnative-marketing-assets-temp,Unclassified,False,none,False,A.8.9,NEEDS CLASSIFICATION,"Bucket has no data classification on record. Cannot assess encryption/access requirements until classified (see A.5.9, A.5.12). Escalate to data owner."
